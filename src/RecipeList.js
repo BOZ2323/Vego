@@ -1,14 +1,8 @@
 import React from 'react'
 
-const RecipeList = ({recipes}) => {
+const RecipeList = ({search, recipes}) => {
 
-    // let VegetableList = recipes.Vegetable.filter( recipe => {
-    //       return id !== exercise.id
-    //   })
-        
-      
-
-    const recipeList = recipes.length ? (recipes.map( recipe => {
+    const recipeList = recipes.length ? (recipes.filter( recipe => recipe.Vegetable.includes(search)).map( recipe => {
            
                 return (
                     <div className="list-item" key="recipe.id">
@@ -16,13 +10,7 @@ const RecipeList = ({recipes}) => {
                     <img src="https://source.unsplash.com/random" alt="random pic"/>
                 </div>
                 )
-            }
-
-            //hier weiterarbeiten, filter() nutzen, um zuerst recipes zu filtern und dann diese Liste zu mappen!
-         
-            
-        
-        
+            } 
         )) : null
     return(
         <div className="recipe-collection">

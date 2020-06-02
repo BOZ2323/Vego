@@ -15,17 +15,12 @@ const [search, setSearch] = useState([])
 
 const getRecipes = async () => {
   const data = await yummies;
-  console.log(data[0].Vegetable, "-- das wird schon!");
   setRecipes(data);
 }
 
-const updateSearch = e => {
-  setSearch(e.target.value)
-  console.log(e.target.value)
-  console.log(search)
+const updateSearch = async (e) => {
+  await setSearch(e.target.value)
 }
-
-
 
   return (
     <div className="App">
@@ -33,9 +28,8 @@ const updateSearch = e => {
         <input className="search-bar" type="text" placeholder="vegetable..." onChange={updateSearch}></input>
         <button className="search-button" type="submit">search</button>
       </form> 
-      <RecipeList recipes={recipes} />
+      <RecipeList recipes={recipes} search={search}/>
       <Recipe recipes={recipes} search={search}/>
-      
     </div>
   );
 }
