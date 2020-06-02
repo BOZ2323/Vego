@@ -5,14 +5,14 @@ import RecipeList from './RecipeList'
 import Recipe from './Recipe'
 
 function App() {
-
+  const [recipes, setRecipes] = useState([])
+  const [search, setSearch] = useState([])
+  const [query, setQuery] = useState([])
+  
 useEffect(()=>{
   getRecipes();
-})
+}, [query])
 
-const [recipes, setRecipes] = useState([])
-const [search, setSearch] = useState([])
-const [query, setQuery] = useState([])
 
 const getRecipes = async () => {
   const data = await yummies;
