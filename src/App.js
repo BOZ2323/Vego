@@ -12,6 +12,7 @@ useEffect(()=>{
 
 const [recipes, setRecipes] = useState([])
 const [search, setSearch] = useState([])
+const [query, setQuery] = useState([])
 
 const getRecipes = async () => {
   const data = await yummies;
@@ -22,13 +23,18 @@ const updateSearch = async (e) => {
   await setSearch(e.target.value)
 }
 
+const getSearch = async (e) =>{
+  e.preventDefault();
+  await setQuery(search)
+}
+
   return (
     <div className="App">
-      <form onSubmit={getRecipes} className="search-form">
+      <form onSubmit={getRecipes && getSearch} className="search-form">
         <input className="search-bar" type="text" placeholder="vegetable..." onChange={updateSearch}></input>
-        <button className="search-button" type="submit">search</button>
+        <button onSubmit={getSearch} className="search-button" type="submit">search</button>
       </form> 
-      <RecipeList recipes={recipes} search={search}/>
+      <RecipeList recipes={recipes} search={search} query={query}/>
       <Recipe recipes={recipes} search={search}/>
     </div>
   );
