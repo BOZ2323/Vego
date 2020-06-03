@@ -1,0 +1,22 @@
+.foto{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+   
+}
+.cards{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    max-width: 100%;
+}

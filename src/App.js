@@ -25,7 +25,7 @@ const updateSearch = async (e) => {
 
 const getSearch = async (e) =>{
   e.preventDefault();
-  await setQuery(search)
+  await setQuery(search);
 }
 
   return (
