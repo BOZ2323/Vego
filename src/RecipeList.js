@@ -8,7 +8,7 @@ const RecipeList = ({search, recipes, query}) => {
                 return (
                     <div className={styles.card} key={uniqueId}>
                         <h1>{recipe.Vegetable}</h1>
-                        <img className={styles.foto} src="https://source.unsplash.com/random" alt="random pic"/>
+                        <img src="https://source.unsplash.com/random" alt="random pic"/>
                     </div>
                 )
             } 

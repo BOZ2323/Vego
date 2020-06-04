@@ -1,11 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+}
 
 html, body {
   padding: 0;
+  margin: 0;
+   /* removes the white space at the right side: */
+  overflow-x:hidden; 
 }
 
 .App {
   min-height: 100vh;
-  background-color: bisque;
+  background-color: #acf1f1;
   margin: 0;
 }
 
@@ -22,7 +29,7 @@ html, body {
   padding: 10px
 }
 .search-button{
-  background: lightcoral;
+  background: #ec7f00;
   border: none;
   padding: 10px 20px;
   color: white;
