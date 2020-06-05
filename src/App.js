@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import yummies from './yummies.json'
 import RecipeList from './RecipeList'
-import Recipe from './Recipe'
+
 
 function App() {
   const [recipes, setRecipes] = useState([])
@@ -35,7 +35,6 @@ const getSearch = async (e) =>{
         <button onSubmit={getSearch} className="search-button" type="submit">search</button>
       </form> 
       <RecipeList recipes={recipes} search={search} query={query}/>
-      <Recipe recipes={recipes} search={search}/>
     </div>
   );
 }

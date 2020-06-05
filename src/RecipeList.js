@@ -7,15 +7,16 @@ const RecipeList = ({search, recipes, query}) => {
         let uniqueId = Math.random()
                 return (
                     <div className={styles.card} key={uniqueId}>
-                        <h1>{recipe.Vegetable}</h1>
-                        <img src="https://source.unsplash.com/random" alt="random pic"/>
+                        <p className={styles.cardHeading}>{recipe.Vegetable}</p>
+                        <div className={styles.opaqueBox} ></div>
+                        <img className={styles.foto} src="https://source.unsplash.com/random" alt="random pic"/>
                     </div>
                 )
             } 
         )) : null
     return(
-        <div className={styles.cards}>
-            <h1>{ recipeList }</h1>
+        <div className={styles.cardWrapper}>
+            <p>{ recipeList }</p>
         </div>
     )
     };
