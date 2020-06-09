@@ -12,8 +12,40 @@ html, body {
 
 .App {
   min-height: 100vh;
-  background-color: #acf1f1;
   margin: 0;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fae4c8;
+  margin-bottom: 20px;
+}
+
+li a{
+  flex: 1;
+  display: flex;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+li a:hover {
+  background-color: #FFCD8E;
 }
 
 .search-form{
@@ -25,12 +57,13 @@ html, body {
 
 .search-bar{
   width: 20%;
-  border: none;
+  border: 1px;
+  border-color: #FFCD8E;
   padding: 10px
 }
 .search-button{
-  background: #ec7f00;
-  border: none;
+  background: #FFCD8E;
+  border: 1px;
   padding: 10px 20px;
-  color: white;
+  color: black;
 }

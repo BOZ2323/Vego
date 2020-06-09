@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+// import Form from './Form'
 import yummies from './yummies.json'
-import RecipeList from './RecipeList'
+import Logo from './Logo'
+import Menu from './Menu'
+import RecipeList from './RecipeList';
+
+
+
+// import { faHome } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 
 
 function App() {
@@ -30,11 +40,12 @@ const getSearch = async (e) =>{
 
   return (
     <div className="App">
-      <form onSubmit={getRecipes && getSearch} className="search-form">
-        <input className="search-bar" type="text" placeholder="vegetable..." onChange={updateSearch}></input>
-        <button onSubmit={getSearch} className="search-button" type="submit">search</button>
-      </form> 
+      {/* <Form getRecipes={getRecipes} getSearch={getSearch} updateSearch={updateSearch}/> */}
+      <Logo />
+      <Menu />
       <RecipeList recipes={recipes} search={search} query={query}/>
+      
+      
     </div>
   );
 }
