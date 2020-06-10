@@ -1,5 +1,5 @@
 ## Screenshot - current state :)
-![ScreenShot](https://github.com/BOZ2323/Vega/blob/master/public/vega-list.png))
+![ScreenShot](https://github.com/BOZ2323/Vega/blob/master/public/vega-list.png)
 
 ## Available Scripts
 
