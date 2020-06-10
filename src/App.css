@@ -4,6 +4,7 @@
 }
 
 html, body {
+  
   padding: 0;
   margin: 0;
    /* removes the white space at the right side: */
@@ -20,6 +21,12 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fae4c8;
+  margin-bottom: 20px;
+  height: 50px;
+
   
 }
 
@@ -31,7 +38,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #fae4c8;
-  margin-bottom: 20px;
+  
+  
 }
 
 li a{
